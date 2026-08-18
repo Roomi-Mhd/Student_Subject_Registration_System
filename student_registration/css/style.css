@@ -1,0 +1,444 @@
+/* ============================================
+   css/style.css — Student Registration System
+   ============================================ */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f0f2f5;
+    color: #222;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* ---- NAVBAR ---- */
+.navbar {
+    background: #1a237e;
+    color: #fff;
+    padding: 12px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .brand {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: .5px;
+}
+
+.navbar .brand span {
+    color: #ffd54f;
+}
+
+.navbar .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14px;
+    opacity: .85;
+    transition: opacity .2s;
+}
+
+.navbar .nav-links a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+/* ---- PAGE WRAPPER ---- */
+.container {
+    max-width: 960px;
+    margin: 36px auto;
+    padding: 0 16px;
+}
+
+.wide-container {
+    max-width: 1200px;
+    margin: 36px auto;
+    padding: 0 16px;
+}
+
+/* ---- CARD ---- */
+.card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .08);
+    padding: 28px 32px;
+    margin-bottom: 24px;
+}
+
+.card h2 {
+    font-size: 20px;
+    color: #1a237e;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e8eaf6;
+    padding-bottom: 10px;
+}
+
+/* ---- FORMS ---- */
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 9px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border .2s;
+    background: #fafafa;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #3949ab;
+    outline: none;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(57, 73, 171, .12);
+}
+
+.form-group .hint {
+    font-size: 12px;
+    color: #888;
+    margin-top: 4px;
+}
+
+/* ---- BUTTONS ---- */
+.btn {
+    display: inline-block;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background .2s, transform .1s;
+}
+
+.btn:active {
+    transform: scale(.97);
+}
+
+.btn-primary {
+    background: #1a237e;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #283593;
+}
+
+.btn-success {
+    background: #2e7d32;
+    color: #fff;
+}
+
+.btn-success:hover {
+    background: #388e3c;
+}
+
+.btn-danger {
+    background: #c62828;
+    color: #fff;
+}
+
+.btn-danger:hover {
+    background: #d32f2f;
+}
+
+.btn-outline {
+    background: transparent;
+    color: #1a237e;
+    border: 2px solid #1a237e;
+}
+
+.btn-outline:hover {
+    background: #e8eaf6;
+}
+
+.btn-sm {
+    padding: 6px 14px;
+    font-size: 13px;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+/* ---- TABLES ---- */
+.table-wrap {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+th {
+    background: #1a237e;
+    color: #fff;
+    padding: 11px 14px;
+    text-align: left;
+    font-weight: 600;
+}
+
+td {
+    padding: 10px 14px;
+    border-bottom: 1px solid #eee;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover td {
+    background: #f5f5f5;
+}
+
+.badge {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.badge-success {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.badge-info {
+    background: #e3f2fd;
+    color: #1565c0;
+}
+
+.badge-warn {
+    background: #fff8e1;
+    color: #f57f17;
+}
+
+/* ---- ALERTS ---- */
+.alert {
+    padding: 12px 16px;
+    border-radius: 7px;
+    margin-bottom: 16px;
+    font-size: 14px;
+}
+
+.alert-success {
+    background: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #a5d6a7;
+}
+
+.alert-danger {
+    background: #ffebee;
+    color: #c62828;
+    border: 1px solid #ef9a9a;
+}
+
+.alert-info {
+    background: #e3f2fd;
+    color: #1565c0;
+    border: 1px solid #90caf9;
+}
+
+/* ---- POPUP OVERLAY ---- */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.popup {
+    background: #fff;
+    border-radius: 14px;
+    padding: 36px 40px;
+    max-width: 440px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, .18);
+}
+
+.popup h2 {
+    color: #1a237e;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.popup p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 24px;
+}
+
+.popup-btn-row {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+.popup-btn {
+    flex: 1;
+    padding: 14px;
+    border-radius: 8px;
+    border: none;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background .2s;
+}
+
+.popup-btn.student {
+    background: #1a237e;
+    color: #fff;
+}
+
+.popup-btn.student:hover {
+    background: #283593;
+}
+
+.popup-btn.admin {
+    background: #37474f;
+    color: #fff;
+}
+
+.popup-btn.admin:hover {
+    background: #455a64;
+}
+
+/* ---- GRID ---- */
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+@media (max-width: 640px) {
+
+    .grid-2,
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar .nav-links a {
+        margin-left: 10px;
+    }
+}
+
+/* ---- STAT CARD ---- */
+.stat-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px 22px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .07);
+    border-left: 5px solid #1a237e;
+}
+
+.stat-card .stat-num {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1a237e;
+}
+
+.stat-card .stat-label {
+    color: #777;
+    font-size: 13px;
+}
+
+/* ---- SUBJECT CHECKBOX LIST ---- */
+.subject-list {
+    list-style: none;
+}
+
+.subject-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    border: 1px solid #e0e0e0;
+    border-radius: 7px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: background .15s;
+}
+
+.subject-list li:hover {
+    background: #f5f5fc;
+}
+
+.subject-list li input[type=checkbox] {
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+}
+
+.subject-list .sub-code {
+    font-size: 12px;
+    color: #888;
+    margin-left: auto;
+}
+
+/* ---- FOOTER ---- */
+footer {
+    text-align: center;
+    padding: 22px;
+    color: #999;
+    font-size: 13px;
+    border-top: 1px solid #eee;
+    margin-top: 40px;
+}
+
+/* ---- SHOW/HIDE PASSWORD ---- */
+.pwd-wrap {
+    position: relative;
+}
+
+.pwd-wrap input {
+    padding-right: 42px;
+}
+
+.pwd-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #888;
+    font-size: 14px;
+}
